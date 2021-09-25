@@ -8,9 +8,9 @@ export async function getAllEntries() {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  });
-  const resJSON = await res.json();
-  return resJSON;
+  })
+    .then((res) => res.json());
+  return res;
 }
 
 export async function getEntryById(id) {
@@ -21,9 +21,9 @@ export async function getEntryById(id) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  });
-  const resJSON = await res.json();
-  return resJSON;
+  })
+    .then((res) => res.json());
+  return res;
 }
 
 export async function postEntry(entry) {
@@ -35,9 +35,9 @@ export async function postEntry(entry) {
       'Access-Control-Allow-Credentials': true 
     },
     body: JSON.stringify(entry),
-  });
-  const resJSON = await res.json();
-  return resJSON;
+  })
+    .then((res) => res.json());
+  return res;
 }
 
 export async function updateEntry(id, entry) {
@@ -49,9 +49,9 @@ export async function updateEntry(id, entry) {
       'Access-Control-Allow-Credentials': true 
     },
     body: JSON.stringify(entry),
-  });
-  const resJSON = await res.json();
-  return resJSON;
+  })
+    .then((res) => res.json());
+  return res;
 }
 
 export async function deleteEntry(id) {
@@ -62,7 +62,7 @@ export async function deleteEntry(id) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  });
-  const resJSON = await res.json();
-  return resJSON;
+  })
+    .then((res) => res.json());
+  return res;
 }
