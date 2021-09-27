@@ -1,26 +1,18 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function NewEntrySuccess({ newEntry }) {
-  const { id, name, event, note, date } = newEntry;
+export default function NewEntrySuccess({ id }) {
   return (
     <div>
-      success
-      {id}
-      {name}
-      {event}
-      {note}
-      {date}
+      <p>Your entry was successfully posted. If you think you'll want to modify this entry in the future, store this id to access the entry:
+      </p>
+      <p>{id}</p>
+      
     </div>
   );
 }
 
 NewEntrySuccess.propTypes = {
-  newEntry: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    event: PropTypes.bool.isRequired,
-    note: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-  })
+  id: PropTypes.number.isRequired,
 };

@@ -6,11 +6,7 @@ import EntryContainer from '../../containers/EntryContainer';
 export default function App() {
   return (
     <Switch>
-      <Route>
-        <EntriesContainer exact path="/" />
-      </Route>
-      <Route>
-        <EntryContainer exact path="/1" />
-      </Route>
+      <Route exact path="/" component={EntriesContainer} />
+      <Route exact path="/edit"  component={EntryContainer} />
     </Switch>);
 }

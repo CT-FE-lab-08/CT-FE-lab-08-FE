@@ -11,13 +11,7 @@ export async function getAllEntries() {
   })
     .then((res) => res.json());
 
-  return res.map(item => ({
-    name: item.name,
-    event: item.event,
-    note: item.note,
-    date: item.date
-  })
-  );
+  return res.reverse();
 }
 
 export async function getEntryById(id) {

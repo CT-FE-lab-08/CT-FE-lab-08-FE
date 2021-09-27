@@ -42,7 +42,7 @@ export default function EntriesContainer() {
     <div>
       { !newEntry
         ? <NewEntryControls onChange={handleChange} onSubmit={handleSubmit} /> 
-        : <NewEntrySuccess newEntry={newEntry}/>
+        : <NewEntrySuccess id={newEntry.id}/>
       }
       <EntriesList entries={entries} />
     </div>
