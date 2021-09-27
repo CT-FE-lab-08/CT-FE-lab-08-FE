@@ -13,3 +13,13 @@ html, body {
   justify-content: flex-start;
   align-items: center;
 }
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function header() {
+export default function EntryDetail() {
   return (
     <div>
-      Alchemy 🥲 Lab
+      EntryDetail
     </div>
   );
 }
