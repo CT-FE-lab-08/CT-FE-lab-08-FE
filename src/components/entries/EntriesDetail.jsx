@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import React from 'react';
-import style from '../../style.css';
 import PropTypes from 'prop-types';
 
 export default function EntryDetail({ entry }) {

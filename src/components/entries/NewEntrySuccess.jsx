@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function NewEntrySuccess({ id }) {
   return (
     <div>
-      <p>Your entry was successfully posted. If you think you'll want to modify this entry in the future, store this id to access the entry:
+      <p>Your entry was successfully posted. If you think you&apos;ll want to modify this entry in the future, store this id to access the entry:
       </p>
       <p>{id}</p>
       
@@ -14,5 +14,5 @@ export default function NewEntrySuccess({ id }) {
 }
 
 NewEntrySuccess.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };

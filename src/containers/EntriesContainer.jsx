@@ -16,25 +16,27 @@ export default function EntriesContainer() {
 
   useEffect(() => {
     getAllEntries()
-      .then((res => setEntries(res)))
+      .then((res) => setEntries(res))
       .catch(() => setEntries([]))
       .finally(() => setLoading(false));
-  }, [newEntry]);
-
-  const handleChange = ({ target }) => {
-    if(target.name === 'name') setName(target.value);
-    if(target.name === 'event') setEvent(target.value);
-    if(target.name === 'note') setNote(target.value);
-  };
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
     const response = await postEntry(name, eventResponse, note);
     setNewEntry(response);
+    const newEntries = await getAllEntries();
+    setEntries(newEntries);
     setLoading(false);
   };
-
+  
+  const handleChange = ({ target }) => {
+    if(target.name === 'name') setName(target.value);
+    if(target.name === 'event') setEvent(target.value);
+    if(target.name === 'note') setNote(target.value);
+  };
+  
   if(loading)
     return <Loading />;
 

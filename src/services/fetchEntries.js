@@ -8,10 +8,10 @@ export async function getAllEntries() {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  })
-    .then((res) => res.json());
+  });
 
-  return res.reverse();
+  const body = await res.json();
+  return body.reverse();
 }
 
 export async function getEntryById(id) {
@@ -22,12 +22,14 @@ export async function getEntryById(id) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  })
-    .then((res) => res.json());
-  return res;
+  });
+
+  const body = await res.json();
+  return body;
 }
 
-export async function postEntry(name, eventResponse, note) {
+export async function postEntry(name, event, note) {
+  if(name === '') name = 'Anonymous';
   const res = await fetch(URL, {
     method: 'POST',
     headers: {
@@ -35,13 +37,14 @@ export async function postEntry(name, eventResponse, note) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-    body: JSON.stringify({ name, event: eventResponse, note }),
-  })
-    .then((res) => res.json());
-  return res;
+    body: JSON.stringify({ name, event, note }),
+  });
+
+  const body = await res.json();
+  return body;
 }
 
-export async function updateEntry(id, entry) {
+export async function updateEntry(id, name, event, note) {
   const res = await fetch(`${URL}/${id}`, {
     method: 'PUT',
     headers: {
@@ -49,10 +52,11 @@ export async function updateEntry(id, entry) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-    body: JSON.stringify(entry),
-  })
-    .then((res) => res.json());
-  return res;
+    body: JSON.stringify({ name, event, note }),
+  });
+
+  const body = await res.json();
+  return body;
 }
 
 export async function deleteEntry(id) {
@@ -63,7 +67,8 @@ export async function deleteEntry(id) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-  })
-    .then((res) => res.json());
-  return res;
+  });
+
+  const body = await res.json();
+  return body;
 }

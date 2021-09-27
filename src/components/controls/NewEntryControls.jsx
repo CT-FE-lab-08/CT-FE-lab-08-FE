@@ -10,10 +10,10 @@ export default function NewEntryControls({ onChange, onSubmit }) {
       <form className={style.flexrow} onSubmit={onSubmit}>
         
         <label htmlFor="name">
-          <input type="text" aria-label="name"name="name" placeholder="name" onChange={onChange} />
+          <input type="text" aria-label="name"name="name" placeholder="your name" onChange={onChange} />
         </label>
 
-        <section className={style.flexrow}>
+        <section className={style.flexrow}>did you cry today?
           <label htmlFor="yes" className={style.flexrow}>
             <input type="radio" id="yes" name="event" value="true" onChange={onChange} />
             <p>YES</p>
@@ -25,7 +25,7 @@ export default function NewEntryControls({ onChange, onSubmit }) {
         </section>
 
         <label htmlFor="note">
-          <input type="text" aria-label="note" name="note" placeholder="notes" onChange={onChange} />
+          <input type="text" aria-label="note" name="note" placeholder="tell me about it" onChange={onChange} />
         </label>
 
         <button aria-label="submit">Submit</button>

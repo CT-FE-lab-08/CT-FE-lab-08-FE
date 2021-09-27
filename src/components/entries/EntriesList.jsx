@@ -31,4 +31,4 @@ EntriesList.propTypes = {
       date: PropTypes.string.isRequired,
     })
   )
-}
+};
