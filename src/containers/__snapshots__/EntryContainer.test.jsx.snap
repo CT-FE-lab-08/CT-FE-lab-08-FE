@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entries Container Test should enter an existing id and render an edit entry form 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <h2>
+          get entry
+        </h2>
+        <form
+          class="flexrow"
+        >
+          <label
+            for="name"
+          >
+            <input
+              aria-label="id"
+              name="id"
+              placeholder="entry id"
+              type="text"
+            />
+          </label>
+          <button
+            aria-label="submit-id"
+          >
+            Search for Entry
+          </button>
+        </form>
+      </div>
+      <h2>
+        Edit Entry
+      </h2>
+      <form
+        class="flexrow"
+      >
+        <label
+          for="name"
+        >
+          <input
+            aria-label="name"
+            name="name"
+            placeholder="test name"
+            type="text"
+          />
+        </label>
+        <section
+          class="flexrow"
+        >
+          <label
+            class="flexrow"
+            for="yes"
+          >
+            <input
+              checked=""
+              id="yes"
+              name="event"
+              type="radio"
+              value="true"
+            />
+            <p>
+              YES
+            </p>
+          </label>
+          <label
+            class="flexrow"
+            for="no"
+          >
+            <input
+              id="no"
+              name="event"
+              type="radio"
+              value="false"
+            />
+            <p>
+              NO
+            </p>
+          </label>
+        </section>
+        <label
+          for="note"
+        >
+          <input
+            aria-label="note"
+            name="note"
+            placeholder="test note"
+            type="text"
+          />
+        </label>
+        <button
+          aria-label="submit-update"
+          type="submit"
+        >
+          Save Updated Entry
+        </button>
+      </form>
+      <button
+        aria-label="submit-delete"
+        type="button"
+      >
+        Delete Entry
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h2>
+        get entry
+      </h2>
+      <form
+        class="flexrow"
+      >
+        <label
+          for="name"
+        >
+          <input
+            aria-label="id"
+            name="id"
+            placeholder="entry id"
+            type="text"
+          />
+        </label>
+        <button
+          aria-label="submit-id"
+        >
+          Search for Entry
+        </button>
+      </form>
+    </div>
+    <h2>
+      Edit Entry
+    </h2>
+    <form
+      class="flexrow"
+    >
+      <label
+        for="name"
+      >
+        <input
+          aria-label="name"
+          name="name"
+          placeholder="test name"
+          type="text"
+        />
+      </label>
+      <section
+        class="flexrow"
+      >
+        <label
+          class="flexrow"
+          for="yes"
+        >
+          <input
+            checked=""
+            id="yes"
+            name="event"
+            type="radio"
+            value="true"
+          />
+          <p>
+            YES
+          </p>
+        </label>
+        <label
+          class="flexrow"
+          for="no"
+        >
+          <input
+            id="no"
+            name="event"
+            type="radio"
+            value="false"
+          />
+          <p>
+            NO
+          </p>
+        </label>
+      </section>
+      <label
+        for="note"
+      >
+        <input
+          aria-label="note"
+          name="note"
+          placeholder="test note"
+          type="text"
+        />
+      </label>
+      <button
+        aria-label="submit-update"
+        type="submit"
+      >
+        Save Updated Entry
+      </button>
+    </form>
+    <button
+      aria-label="submit-delete"
+      type="button"
+    >
+      Delete Entry
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

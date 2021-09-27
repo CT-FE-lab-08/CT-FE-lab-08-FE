@@ -28,7 +28,7 @@ describe('Entries Container Test', () => {
   afterAll(() => server.close());
 
   it('should enter an existing id and render an edit entry form', async () => {
-    render(
+    const container = render(
       <MemoryRouter>
         <EntryContainer />
       </MemoryRouter>
@@ -54,7 +54,7 @@ describe('Entries Container Test', () => {
       
       expect(nameInput).toBeInTheDocument();
       expect(noteInput).toBeInTheDocument();
-
+      expect(container).toMatchSnapshot();
     });
   });
 });
