@@ -38,7 +38,7 @@ describe('Entries Container Test', () => {
 
   it('should enter a new cry and re-render the DOM with the new entry', async () => {
   
-    render(
+    const container = render(
       <MemoryRouter>
         <EntriesContainer />
       </MemoryRouter>
@@ -66,7 +66,7 @@ describe('Entries Container Test', () => {
       );
   
       expect(response).toBeInTheDocument();
-
+      expect(container).toMatchSnapshot();
     });
   });
 });
