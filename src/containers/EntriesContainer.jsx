@@ -1,15 +1,17 @@
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
-import NewEntryControls from '../components/controls/NewEntryControls';
 import EntriesList from '../components/entries/EntriesList';
 import Loading from '../components/Loading';
+import NewEntryControls from '../components/controls/NewEntryControls';
+import NewEntrySuccess from '../components/entries/NewEntrySuccess';
 import { getAllEntries, postEntry } from '../services/fetchEntries';
 
 export default function EntriesContainer() {
   const [loading, setLoading] = useState(true);
   const [entries, setEntries] = useState([]);
+  const [newEntry, setNewEntry] = useState(null);
   const [name, setName] = useState('');
-  const [event, setEvent] = useState(true);
+  const [eventResponse, setEvent] = useState(true);
   const [note, setNote] = useState('');
 
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function EntriesContainer() {
       .then((res => setEntries(res)))
       .catch(() => setEntries([]))
       .finally(() => setLoading(false));
-  }, []);
+  }, [newEntry]);
 
   const handleChange = ({ target }) => {
     if(target.name === 'name') setName(target.value);
@@ -25,10 +27,11 @@ export default function EntriesContainer() {
     if(target.name === 'note') setNote(target.value);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
-    await postEntry(name, event, note);
-    await getAllEntries();
+    const response = await postEntry(name, eventResponse, note);
+    setNewEntry(response);
     setLoading(false);
   };
 
@@ -37,7 +40,10 @@ export default function EntriesContainer() {
 
   return (
     <div>
-      <NewEntryControls onChange={handleChange} onSubmit={handleSubmit} />
+      { !newEntry
+        ? <NewEntryControls onChange={handleChange} onSubmit={handleSubmit} /> 
+        : <NewEntrySuccess newEntry={newEntry}/>
+      }
       <EntriesList entries={entries} />
     </div>
   );

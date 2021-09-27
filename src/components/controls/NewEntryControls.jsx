@@ -28,8 +28,8 @@ export default function NewEntryControls({ onChange, onSubmit }) {
           <input type="text" aria-label="note" name="note" placeholder="notes" onChange={onChange} />
         </label>
 
+        <button aria-label="submit">Submit</button>
       </form>
-      <button aria-label="submit">Submit</button>
     </>
   );
 }

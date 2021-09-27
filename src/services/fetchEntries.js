@@ -10,7 +10,14 @@ export async function getAllEntries() {
     },
   })
     .then((res) => res.json());
-  return res;
+
+  return res.map(item => ({
+    name: item.name,
+    event: item.event,
+    note: item.note,
+    date: item.date
+  })
+  );
 }
 
 export async function getEntryById(id) {
@@ -26,7 +33,7 @@ export async function getEntryById(id) {
   return res;
 }
 
-export async function postEntry(entry) {
+export async function postEntry(name, eventResponse, note) {
   const res = await fetch(URL, {
     method: 'POST',
     headers: {
@@ -34,7 +41,7 @@ export async function postEntry(entry) {
       'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Credentials': true 
     },
-    body: JSON.stringify(entry),
+    body: JSON.stringify({ name, event: eventResponse, note }),
   })
     .then((res) => res.json());
   return res;
